@@ -1,0 +1,5 @@
+# Nmap 7.80SVN scan initiated Sun Oct 13 18:38:20 2019 as: nmap -sC -sV -p0-65000 -oA nmap -vvv 10.10.10.8
+# Ports scanned: TCP(65001;0-65000) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.8 ()	Status: Up
+Host: 10.10.10.8 ()	Ports: 80/open/tcp//http//HttpFileServer httpd 2.3/	Ignored State: filtered (65000)
+# Nmap done at Sun Oct 13 18:40:13 2019 -- 1 IP address (1 host up) scanned in 112.95 seconds

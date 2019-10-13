@@ -1,0 +1,18 @@
+# Nmap 7.80SVN scan initiated Sun Oct 13 18:38:20 2019 as: nmap -sC -sV -p0-65000 -oA nmap -vvv 10.10.10.8
+Nmap scan report for 10.10.10.8
+Host is up, received syn-ack (0.062s latency).
+Scanned at 2019-10-13 18:38:21 EEST for 112s
+Not shown: 65000 filtered ports
+Reason: 65000 no-responses
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack HttpFileServer httpd 2.3
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: HFS 2.3
+|_http-title: HFS /
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 13 18:40:13 2019 -- 1 IP address (1 host up) scanned in 112.95 seconds
