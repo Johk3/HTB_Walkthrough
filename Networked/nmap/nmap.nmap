@@ -1,0 +1,65 @@
+# Nmap 7.80SVN scan initiated Fri Oct 18 13:06:44 2019 as: nmap -sC -sV -oA nmap --script vuln -vvv 10.10.10.146
+Nmap scan report for 10.10.10.146
+Host is up, received syn-ack (0.063s latency).
+Scanned at 2019-10-18 13:06:55 EEST for 34s
+Not shown: 997 filtered ports
+Reason: 988 no-responses and 9 host-unreaches
+PORT    STATE  SERVICE REASON       VERSION
+22/tcp  open   ssh     syn-ack      OpenSSH 7.4 (protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:7.4: 
+|     	CVE-2018-15919	5.0	https://vulners.com/cve/CVE-2018-15919
+|_    	CVE-2017-15906	5.0	https://vulners.com/cve/CVE-2017-15906
+80/tcp  open   http    syn-ack      Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /backup/: Backup folder w/ directory listing
+|   /icons/: Potentially interesting folder w/ directory listing
+|_  /uploads/: Potentially interesting folder
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Fri, 18 Oct 2019 10:04:04 GMT
+| Server: Apache/2.4.6 (CentOS) PHP/5.4.16
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.6: 
+|     	CVE-2017-7679	7.5	https://vulners.com/cve/CVE-2017-7679
+|     	CVE-2018-1312	6.8	https://vulners.com/cve/CVE-2018-1312
+|     	CVE-2017-15715	6.8	https://vulners.com/cve/CVE-2017-15715
+|     	CVE-2014-0226	6.8	https://vulners.com/cve/CVE-2014-0226
+|     	CVE-2017-9788	6.4	https://vulners.com/cve/CVE-2017-9788
+|     	CVE-2019-10098	5.8	https://vulners.com/cve/CVE-2019-10098
+|     	CVE-2019-0220	5.0	https://vulners.com/cve/CVE-2019-0220
+|     	CVE-2018-17199	5.0	https://vulners.com/cve/CVE-2018-17199
+|     	CVE-2017-9798	5.0	https://vulners.com/cve/CVE-2017-9798
+|     	CVE-2017-15710	5.0	https://vulners.com/cve/CVE-2017-15710
+|     	CVE-2016-8743	5.0	https://vulners.com/cve/CVE-2016-8743
+|     	CVE-2016-2161	5.0	https://vulners.com/cve/CVE-2016-2161
+|     	CVE-2016-0736	5.0	https://vulners.com/cve/CVE-2016-0736
+|     	CVE-2014-3523	5.0	https://vulners.com/cve/CVE-2014-3523
+|     	CVE-2014-0231	5.0	https://vulners.com/cve/CVE-2014-0231
+|     	CVE-2014-0098	5.0	https://vulners.com/cve/CVE-2014-0098
+|     	CVE-2013-6438	5.0	https://vulners.com/cve/CVE-2013-6438
+|     	CVE-2019-10092	4.3	https://vulners.com/cve/CVE-2019-10092
+|     	CVE-2016-4975	4.3	https://vulners.com/cve/CVE-2016-4975
+|     	CVE-2015-3185	4.3	https://vulners.com/cve/CVE-2015-3185
+|     	CVE-2014-8109	4.3	https://vulners.com/cve/CVE-2014-8109
+|     	CVE-2014-0118	4.3	https://vulners.com/cve/CVE-2014-0118
+|     	CVE-2014-0117	4.3	https://vulners.com/cve/CVE-2014-0117
+|     	CVE-2013-4352	4.3	https://vulners.com/cve/CVE-2013-4352
+|     	CVE-2018-1283	3.5	https://vulners.com/cve/CVE-2018-1283
+|_    	CVE-2016-8612	3.3	https://vulners.com/cve/CVE-2016-8612
+443/tcp closed https   conn-refused
+
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 18 13:07:29 2019 -- 1 IP address (1 host up) scanned in 44.23 seconds

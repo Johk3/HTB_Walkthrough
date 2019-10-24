@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80SVN scan initiated Tue Oct 22 09:09:51 2019 as: nmap -sC -sV -&#45;script vuln -p0-65000 -oA nmap -vvv 10.10.10.13 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -&#45;script vuln -p0-65000 -oA nmap -vvv 10.10.10.13" start="1571724591" startstr="Tue Oct 22 09:09:51 2019" version="7.80SVN" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65001" services="0-65000"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1571724592"/>
+<taskend task="NSE" time="1571724602"/>
+<taskbegin task="NSE" time="1571724602"/>
+<taskend task="NSE" time="1571724602"/>
+<taskbegin task="Ping Scan" time="1571724602"/>
+<taskend task="Ping Scan" time="1571724602" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1571724602"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1571724602"/>
+<taskbegin task="Connect Scan" time="1571724602"/>
+<taskprogress task="Connect Scan" time="1571724633" percent="7.07" remaining="408" etc="1571725040"/>
+<taskprogress task="Connect Scan" time="1571724663" percent="21.15" remaining="228" etc="1571724890"/>
+<taskprogress task="Connect Scan" time="1571724693" percent="35.46" remaining="166" etc="1571724859"/>
+<taskprogress task="Connect Scan" time="1571724723" percent="49.23" remaining="125" etc="1571724848"/>
+<taskprogress task="Connect Scan" time="1571724753" percent="67.79" remaining="72" etc="1571724825"/>
+<taskend task="Connect Scan" time="1571724798" extrainfo="65001 total ports"/>
+<taskbegin task="Service scan" time="1571724798"/>
+<taskend task="Service scan" time="1571724805" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1571724805"/>
+<taskprogress task="NSE" time="1571724836" percent="98.89" remaining="1" etc="1571724836"/>
+<taskprogress task="NSE" time="1571724866" percent="98.89" remaining="1" etc="1571724867"/>
+<taskprogress task="NSE" time="1571724896" percent="98.89" remaining="2" etc="1571724897"/>
+<taskprogress task="NSE" time="1571724926" percent="98.89" remaining="2" etc="1571724927"/>
+<taskprogress task="NSE" time="1571724956" percent="98.89" remaining="2" etc="1571724958"/>
+<taskprogress task="NSE" time="1571724986" percent="98.89" remaining="3" etc="1571724988"/>
+<taskprogress task="NSE" time="1571725016" percent="98.89" remaining="3" etc="1571725018"/>
+<taskprogress task="NSE" time="1571725046" percent="98.89" remaining="3" etc="1571725049"/>
+<taskprogress task="NSE" time="1571725076" percent="98.89" remaining="4" etc="1571725079"/>
+<taskprogress task="NSE" time="1571725106" percent="98.89" remaining="4" etc="1571725109"/>
+<taskend task="NSE" time="1571725117"/>
+<taskbegin task="NSE" time="1571725117"/>
+<taskend task="NSE" time="1571725117"/>
+<host starttime="1571724602" endtime="1571725117"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.10.10.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="64999">
+<extrareasons reason="no-responses" count="64999"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="vulners" output="&#xa;  cpe:/a:apache:http_server:2.4.18: &#xa;    &#x9;CVE-2017-7679&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-7679&#xa;    &#x9;CVE-2017-7668&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-7668&#xa;    &#x9;CVE-2017-3169&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-3169&#xa;    &#x9;CVE-2017-3167&#x9;7.5&#x9;https://vulners.com/cve/CVE-2017-3167&#xa;    &#x9;CVE-2019-0211&#x9;7.2&#x9;https://vulners.com/cve/CVE-2019-0211&#xa;    &#x9;CVE-2018-1312&#x9;6.8&#x9;https://vulners.com/cve/CVE-2018-1312&#xa;    &#x9;CVE-2017-15715&#x9;6.8&#x9;https://vulners.com/cve/CVE-2017-15715&#xa;    &#x9;CVE-2019-10082&#x9;6.4&#x9;https://vulners.com/cve/CVE-2019-10082&#xa;    &#x9;CVE-2017-9788&#x9;6.4&#x9;https://vulners.com/cve/CVE-2017-9788&#xa;    &#x9;CVE-2019-10098&#x9;5.8&#x9;https://vulners.com/cve/CVE-2019-10098&#xa;    &#x9;CVE-2019-0220&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-0220&#xa;    &#x9;CVE-2019-0196&#x9;5.0&#x9;https://vulners.com/cve/CVE-2019-0196&#xa;    &#x9;CVE-2018-17199&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-17199&#xa;    &#x9;CVE-2018-1333&#x9;5.0&#x9;https://vulners.com/cve/CVE-2018-1333&#xa;    &#x9;CVE-2017-9798&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-9798&#xa;    &#x9;CVE-2017-15710&#x9;5.0&#x9;https://vulners.com/cve/CVE-2017-15710&#xa;    &#x9;CVE-2016-8743&#x9;5.0&#x9;https://vulners.com/cve/CVE-2016-8743&#xa;    &#x9;CVE-2016-8740&#x9;5.0&#x9;https://vulners.com/cve/CVE-2016-8740&#xa;    &#x9;CVE-2016-4979&#x9;5.0&#x9;https://vulners.com/cve/CVE-2016-4979&#xa;    &#x9;CVE-2019-0197&#x9;4.9&#x9;https://vulners.com/cve/CVE-2019-0197&#xa;    &#x9;CVE-2019-10092&#x9;4.3&#x9;https://vulners.com/cve/CVE-2019-10092&#xa;    &#x9;CVE-2018-11763&#x9;4.3&#x9;https://vulners.com/cve/CVE-2018-11763&#xa;    &#x9;CVE-2016-4975&#x9;4.3&#x9;https://vulners.com/cve/CVE-2016-4975&#xa;    &#x9;CVE-2016-1546&#x9;4.3&#x9;https://vulners.com/cve/CVE-2016-1546&#xa;    &#x9;CVE-2018-1283&#x9;3.5&#x9;https://vulners.com/cve/CVE-2018-1283&#xa;    &#x9;CVE-2016-8612&#x9;3.3&#x9;https://vulners.com/cve/CVE-2016-8612"><table key="cpe:/a:apache:http_server:2.4.18">
+<table>
+<elem key="id">CVE-2017-7679</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-7668</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-3169</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-3167</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">7.5</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-0211</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">7.2</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2018-1312</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">6.8</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-15715</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">6.8</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-10082</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">6.4</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-9788</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">6.4</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-10098</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.8</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-0220</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-0196</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2018-17199</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2018-1333</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-9798</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2017-15710</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2016-8743</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2016-8740</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2016-4979</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">5.0</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-0197</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">4.9</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2019-10092</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2018-11763</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2016-4975</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2016-1546</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">4.3</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2018-1283</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">3.5</elem>
+<elem key="type">cve</elem>
+</table>
+<table>
+<elem key="id">CVE-2016-8612</elem>
+<elem key="is_exploit">false</elem>
+<elem key="cvss">3.3</elem>
+<elem key="type">cve</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="61611" rttvar="728" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1571725117"/>
+<taskend task="NSE" time="1571725117"/>
+<taskbegin task="NSE" time="1571725117"/>
+<taskend task="NSE" time="1571725117"/>
+<runstats><finished time="1571725117" timestr="Tue Oct 22 09:18:37 2019" elapsed="525.94" summary="Nmap done at Tue Oct 22 09:18:37 2019; 1 IP address (1 host up) scanned in 525.94 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
