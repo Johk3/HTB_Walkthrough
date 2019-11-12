@@ -1,0 +1,4 @@
+# Nmap 7.80SVN scan initiated Tue Nov 12 15:09:41 2019 as: nmap -sC -sV -oA nmap 10.10.10.48
+Host: 10.10.10.48 ()	Status: Up
+Host: 10.10.10.48 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)/, 53/filtered/tcp//domain///, 80/open/tcp//http//lighttpd 1.4.35/	Ignored State: closed (997)
+# Nmap done at Tue Nov 12 15:10:08 2019 -- 1 IP address (1 host up) scanned in 27.63 seconds
